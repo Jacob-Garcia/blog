@@ -14,7 +14,8 @@ if (5 < 7) {
 } else {
 	echo "Bye";
 }
-
 ?>
+<br>
+<br>
 </body>
 </html>
