@@ -20,7 +20,7 @@
     else {
     	echo "Database already exists";
     }
-     
+     /* This is a creation of the table posts */
     $query = $connection->query("CREATE TABLE posts ("
     	    . "id int(11) NOT NULL AUTO_INCREMENT"
     	    . "title varchar(225) NOT_NULL"
