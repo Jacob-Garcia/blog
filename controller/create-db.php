@@ -2,20 +2,21 @@
     require_once(__DIR__ . "/../model/database.php");
 
     $connection = new mysqli($host, $username, $password);
-
+/* An if statement that kills the code if there is a connection error */
     if($connection->connect_error) {
         die("Error: " . $connection->connection_error);
     } 
-
+    
     $exists = $connection->select_db($database);
-
+    /* An if statement that commands the creation of the database */
     if (!$exists) {
     	$query = $connection->query("CREATE DATABASE $database");
-
+    /* An if statement that echoes the creation of the database, now rendered useless */
     	if ($query) {
     		echo "Successfully created database:" . $database;
     	}
     }
+    /* An else statement that echoes the existing database */
     else {
     	echo "Database already exists";
     }
