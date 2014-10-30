@@ -27,9 +27,9 @@
     	. "title varchar(255) NOT NULL,"
     	. "post text NOT NULL,"
     	. "PRIMARY KEY (id))");
-
-    if ($query) {
-         echo "Successfully created table: posts";
-    }
+    /* an if statement that echoes the creation of the table: posts */
+      if ($query) {
+      	echo "Successfully created table: posts";
+      }
 
      $connection->close();
