@@ -31,5 +31,5 @@
       if ($query) {
       	echo "Successfully created table: posts";
       }
-
+     /* Closes the connection */
      $connection->close();
