@@ -1,3 +1,7 @@
+<DOCTYPE <!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<body>
 <?php
 /* An action reuqiring the header.php file */
      require_once(__DIR__ . "/view/header.php");
@@ -8,3 +12,5 @@
 /* An action requiring the footer.php file */
      require_once(__DIR__ . "/view/footer.php");
 ?>
+</body>
+</html>
