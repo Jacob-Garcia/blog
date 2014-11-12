@@ -1,8 +1,9 @@
 <?php
+  	/* A require_once that requires the config.php. */
     require_once(__DIR__ . "/../model/config.php");
 ?>
 <h1>Create Blog Post</h1>
-
+   <!-- a form method that calls for a "post" usage -->
  <form method="post" action="<?php echo $path . "controller/create-post.php"; ?>">
    <!-- A div that contains the Title label and the input text type. -->
  	 <div>
