@@ -1,6 +1,5 @@
 <html>
 <link rel="stylesheet" type="text/css" href="css/main.css">
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <body>
 	<?php
 /* An action reuqiring the header.php file */
