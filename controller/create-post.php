@@ -1,6 +1,6 @@
 <?php
      /* A requrie_once that calls for database.php to use. */
-     require_once(__DIR__ . "/../model/database.php");
+     require_once(__DIR__ . "/../model/config.php");
      /* A call for the variables titles host, username, password, and database */
      $connection = new mysqli($host, $username, $password, $database); 
 
