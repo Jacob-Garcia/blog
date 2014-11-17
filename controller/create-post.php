@@ -18,5 +18,5 @@
       echo "<p>$connection->error</p>";
     }
 
-   /*Closes the connection. */
+   /*Closes the connection to the database. */
    $connection->close();

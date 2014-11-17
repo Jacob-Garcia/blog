@@ -10,4 +10,24 @@
   	 private $username;
   	 private $password;
   	 private $database;
+
+  	 public function __construct($host, $username, $password, $database) {
+            $this->host = $host; /* This is accessing the $host variable, and the rest are accessing the other variables. */
+            $this->username = $username;
+            $this->password = $password;
+            $this->database = $database;
+  	 }
+
+  	 public function openConnection() {
+            /* Opens the connection to a place that has not been set. */
+  	 }
+
+  	 public function closeConnection() {
+            /* Closes the connection to aformentioned "unset" place. */
+  	 }
+
+  	 public function query($string){
+           /* A fucntion that uses a $string. */
+  	 }
+
   }
