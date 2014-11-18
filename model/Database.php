@@ -19,7 +19,14 @@
   	 }
 
   	 public function openConnection() {
-            /* Opens the connection to a place that has not been set. */
+            /* Opens the connection to host, username, password, and database. */
+             $this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
+
+             if($this->connection->connect_error) {
+                die("<p>Error: " . $connection->connection_error . "</p>");
+            }
+    } 
+    
   	 }
 
   	 public function closeConnection() {
