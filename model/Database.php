@@ -20,6 +20,8 @@
 
   	 public function openConnection() {
             /* Opens the connection to host, username, password, and database. */
+
+            /* A connection function that does what the above comment says, and an if statement that says if there is a connection error, kill the connection, */
              $this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
 
              if($this->connection->connect_error) {
@@ -30,7 +32,11 @@
   	 }
 
   	 public function closeConnection() {
-            /* Closes the connection to aformentioned "unset" place. */
+            /* Closes the connection. */
+            if (isset($this->connection)) {
+            	 $this->connection->close();
+            	 /*An if statement that says if the connection is set already, then close it. */
+            }
   	 }
 
   	 public function query($string){
