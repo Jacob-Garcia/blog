@@ -40,7 +40,16 @@
   	 }
 
   	 public function query($string){
-           /* A fucntion that uses a $string. */
+           /* A function that uses the variable "$string". */
+
+           /* Opens the connection to "$this" */
+           $this->openConnection();
+           /* The variable "$query" is used to use to variable "$this" to create a connection to the "$string" */
+           $query = $this->connection->query($string);
+           /* Closes connection to "$this" */
+           $this->closeConnection();
+           /* Returns the "$query" variable. */
+           return $query;
   	 }
 
   }
