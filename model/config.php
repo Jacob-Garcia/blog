@@ -1,4 +1,6 @@
 <?php
+    require_once(__DIR__ . "/database.php");
+
     /*A variable that uses "/blog/" as its source */
     $path = "/blog/";
       /* Variables that define several things used in the blog project */
@@ -6,6 +8,9 @@
     $username = "root";
     $password = "root";
     $database = "blog_db"; 
-      /* This new variable is used to hold the Database information. */
-    $connection = new Database($host, $username, $password, $database);
+
+    if (!isset($_SESSION["connection"])) {
+        $connection = new Database($host, $username, $password, $database);
+        $_SESSION["connection"] = $connection;
+    }
 ?>

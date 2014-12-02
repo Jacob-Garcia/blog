@@ -18,7 +18,27 @@
             $this->database = $database;
   	 }
 
-  	 public function openConnection() {
+  	    $this->connection = new mysqli($host, $username, $password);
+		/* An if statement that kills the code if there is a connection error */
+    		if($this->connection->connect_error) {
+        	die("<p>Error: " . $this->connection->connection_error . "</p>");
+    } 
+    
+    	$exists = $this->connection->select_db($database);
+    /* An if statement that commands the creation of the database */
+    		if (!$exists) {
+    	$query = $this->connection->query("CREATE DATABASE $database");
+    /* An if statement that echoes the creation of the database, now rendered useless */
+    		if ($query) {
+    			echo "<p>Successfully created database: " . $database . "</p>";
+    		}
+    }
+    /* An else statement that echoes the existing database */
+    	else {
+    		echo "Database already exists.";
+    }
+
+  	 	public function openConnection() {
             /* Opens the connection to host, username, password, and database. */
 
             /* A connection function that does what the above comment says, and an if statement that says if there is a connection error, kill the connection, */
