@@ -17,13 +17,11 @@
             $this->password = $password;
             $this->database = $database;
   	 }
-
   	    $this->connection = new mysqli($host, $username, $password);
 		/* An if statement that kills the code if there is a connection error */
     		if($this->connection->connect_error) {
-        	die("<p>Error: " . $this->connection->connection_error . "</p>");
+          die("<p>Error: " . $this->connection->connection_error . "</p>");
     } 
-    
     	$exists = $this->connection->select_db($database);
     /* An if statement that commands the creation of the database */
     		if (!$exists) {
