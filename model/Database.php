@@ -16,7 +16,6 @@
             $this->username = $username;
             $this->password = $password;
             $this->database = $database;
-  	 }
   	    $this->connection = new mysqli($host, $username, $password);
 		/* An if statement that kills the code if there is a connection error */
     		if($this->connection->connect_error) {
@@ -35,7 +34,7 @@
     	else {
     		echo "Database already exists.";
     }
-
+       }
   	 	public function openConnection() {
             /* Opens the connection to host, username, password, and database. */
 
@@ -47,7 +46,6 @@
             }
     } 
     
-  	 }
 
   	 public function closeConnection() {
             /* Closes the connection. */
