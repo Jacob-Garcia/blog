@@ -1,5 +1,6 @@
 <?php
     require_once(__DIR__ . "/database.php");
+    session_start();
 
     /*A variable that uses "/blog/" as its source */
     $path = "/blog/";
