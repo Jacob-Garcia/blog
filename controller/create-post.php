@@ -7,7 +7,7 @@
     $date = new DateTime('today');
     $time = new DateTime('America/Los_Angeles');
 
-    $query = $connection->query("INSERT INTO posts SET title = '$title', post = '$post'");
+    $query = $_SESSION["connection"]->query("INSERT INTO posts SET title = '$title', post = '$post'");
 /* Creates a connection to the query variable */  /* An action that inserts an object into "posts" */
 
    /* an if statement that echoes a line of text to confirm wether or not the $query works. Also has an else statement to echo if it doesn't work. */
