@@ -1,7 +1,7 @@
 <?php
     require_once(__DIR__ . "/database.php");
     session_start();
-
+    session_regenerate_id(true);
     /*A variable that uses "/blog/" as its source */
     $path = "/blog/";
       /* Variables that define several things used in the blog project */
