@@ -3,10 +3,14 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <body>
 	<?php
+/* An action requiring the login-verify.php file */
+	 require_once(__DIR__ . "/controller/login-verify.php");
 /* An action reuqiring the header.php file */
      require_once(__DIR__ . "/view/header.php");
-/* An action requiring the navigation.php file */
-     require_once(__DIR__ . "/view/navigation.php");
+     
+     if (authenticateUser()) {
+     	require_once(__DIR__ . "/view/navigation.php")
+     }
 /* An action requiring the create-db.php file */
      require_once(__DIR__ . "/controller/create-db.php");
 /* An action requiring the footer.php file */
